@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+  <title>Data Visualization Documentation</title>
+  <style>
+    /* Reset default styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Basic styling */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+    }
+
+    header,
+    nav,
+    main,
+    footer {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+    }
+
+    nav li {
+      margin-bottom: 10px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    main h2 {
+      margin-bottom: 10px;
+    }
+
+    /* YouTube video container */
+    .youtube-video-container {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+    }
+
+    .youtube-video-container::after {
+      display: block;
+      content: "";
+      padding-top: 56.25%;
+      /* 16:9 aspect ratio */
+    }
+
+    .youtube-video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Data Visualization with CSS</h1>
+    <p>Learn how to create beautiful charts and graphs using CSS.</p>
+  </header>
+
+  <nav>
+    <!-- Sidebar menu (add links to different sections) -->
+    <ul>
+      <li><a href="#introduction">Introduction</a></li>
+      <li><a href="#bar-charts">Bar Charts</a></li>
+      <!-- Add more menu items as needed -->
+    </ul>
+  </nav>
+
+  <main>
+    <section id="introduction">
+      <h2>Introduction</h2>
+      <!-- Your content about data visualization goes here -->
+    </section>
+
+    <section id="bar-charts">
+      <h2>Bar Charts</h2>
+      <!-- Example bar charts and explanations -->
+    </section>
+
+    <!-- Add more sections for other types of charts (line charts, pie charts, etc.) -->
+
+    <section id="youtube-video">
+      <h2>Watch Our Tutorial</h2>
+      <!-- Embedded YouTube video -->
+      <div class="youtube-video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/your-video-id" frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2024 DataVizDocs. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>
