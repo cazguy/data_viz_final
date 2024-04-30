@@ -35,10 +35,17 @@
     }
 
     .container {
-      max-width: 1200px;
-      margin: 20px auto;
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: 10px;
+      max-width: 1035px;
+      margin: 30px auto;
       padding: 20px;
       box-sizing: border-box;
+    }
+
+    #main-viz {
+      grid-column: span 2;
     }
 
     h1 {
@@ -63,9 +70,6 @@
     }
 
     #info-container {
-      position: fixed;
-      top: 50px;
-      right: 20px;
       background-color: white;
       padding: 10px;
       border: 1px solid #ccc;
@@ -87,22 +91,23 @@
 
 <body>
   <div class="banner">
-    <a href="#">Documentation</a>
-    <a href="#">YouTube Video</a>
+    <a href="#">Documentation Page</a>
   </div>
   <div class="container">
-    <h1>Heart Attacks and Risk Factors</h1>
-    <div id="selections">
-      <label><input type="radio" name="heatmap" id="heart">Percentage of State Population Who Had Heart Attack</label>
-      <label><input type="radio" name="heatmap" id="bmi">Average BMI</label>
-      <label><input type="radio" name="heatmap" id="sleep">Average Sleep Hours</label>
-      <label><input type="radio" name="heatmap" id="mental">Average Mental Health Days</label>
-      <label><input type="radio" name="heatmap" id="age">Average Age</label>
+    <div>
+      <h1>Heart Attacks and Risk Factors</h1>
+      <div id="selections">
+        <label><input type="radio" name="heatmap" id="heart">Percentage of State Population Who Had Heart Attack</label>
+        <label><input type="radio" name="heatmap" id="bmi">Average BMI</label>
+        <label><input type="radio" name="heatmap" id="sleep">Average Sleep Hours</label>
+        <label><input type="radio" name="heatmap" id="mental">Average Mental Health Days</label>
+        <label><input type="radio" name="heatmap" id="age">Average Age</label>
+      </div>
     </div>
-    <svg></svg>
     <div id="info-container">
       <h2>Please Select A State</h2>
     </div>
+    <svg id="main-viz"></svg>
   </div>
   <script>
     createChart();
